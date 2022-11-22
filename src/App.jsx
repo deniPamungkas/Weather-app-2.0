@@ -7,13 +7,17 @@ function App() {
   const [values, setValues] = useState({
     Username:"",
     Email:"",
-    Birtday:"",
+    Birthday:"",
     Password:"",
     ConfirmPassword:"",
   })
 
   const handleChange =(e)=>{
-    setValues(e.target.value)
+    setValues({...values,[e.target.name] :e.target.value})
+  }
+  const handleSub=(e)=>{
+    e.preventDefault()
+    console.log(...values);
   }
   return (
     <div className="App">
@@ -22,7 +26,7 @@ function App() {
         {data.map((item) => {
           return <Input key={item.id} {...item} value={values[item.name]} onChange={handleChange}/>;
         })}
-        <input type='submit' value='Submit'/>
+        <input type='submit' value='Submit' onClick={handleSub}/>
       </form>
     </div>
   );
