@@ -5,7 +5,16 @@ form{
     background-color: lightblue;
     box-sizing: border-box;
     width: 450px;
-    height: 600px;
+    height: 700px;
     padding: 20px 30px;
     margin: auto;
+}
+span{
+    color: red;
+    display: none;
+    transform: translateY(-15px);
+}
+
+input:invalid~span{
+    display: block;
 }

@@ -17,7 +17,7 @@ function App() {
   }
   const handleSub=(e)=>{
     e.preventDefault()
-    console.log(...values);
+    console.log(...values,[e.target]);
   }
   return (
     <div className="App">
