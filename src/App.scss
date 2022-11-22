@@ -15,6 +15,6 @@ span{
     transform: translateY(-15px);
 }
 
-input:invalid~span{
+input:invalid[focused="true"]~span{
     display: block;
 }
