@@ -1,20 +1,175 @@
-body{
-    padding: 50px 0;
-}
-form{
-    background-color: lightblue;
-    box-sizing: border-box;
-    width: 450px;
-    height: 700px;
-    padding: 20px 30px;
-    margin: auto;
-}
-span{
-    color: red;
-    display: none;
-    transform: translateY(-15px);
-}
+$white: rgb(0, 0, 0);
 
-input:invalid[focused="true"]~span{
-    display: block;
+.app {
+  font-family: "Raleway", sans-serif;
+  padding-top: 25px;
+  height: 110vh;
+  background-image: url("../src/Images/sun.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .wrap-app {
+    margin: auto;
+    width: 70%;
+    height: 90vh;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+
+    .left {
+      padding-top: 30px;
+      flex: 2;
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+
+      .item {
+        margin-bottom: 50px;
+        form {
+          margin: auto;
+          width: fit-content;
+          display: flex;
+          align-items: center;
+          box-sizing: border-box;
+          padding: 0 2px;
+          border-bottom: 1px solid $white;
+          input {
+            background-color: rgba(0, 0, 0, 0);
+            color: $white;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            height: 30px;
+            width: 130px;
+          }
+          button {
+            border: none;
+            height: 32px;
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 18px;
+            color: $white;
+          }
+        }
+        &.suhu {
+          width: 80%;
+          min-height: fit-content;
+          margin: auto;
+          h1 {
+            font-size: 60px;
+            margin-bottom: -15px;
+            font-weight: 500;
+          }
+          span {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: fit-content;
+            height: 65px;
+
+            p {
+              font-size: 9px;
+            }
+            h2 {
+              font-size: 30px;
+              font-weight: 400;
+            }
+          }
+        }
+        &.icon {
+          background-color: #fff;
+          width: 80%;
+          height: 100px;
+          margin: auto;
+        }
+        &.sun {
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 80%;
+          height: 130px;
+          #sunrise,
+          #sunset {
+            width: 100%;
+            height: 45%;
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 2px 10px;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            div {
+              p {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right {
+      padding-top: 30px;
+      flex: 7;
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding-left: 30px;
+
+      #logo {
+        width: 70px;
+        font-size: 13px;
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
+      #city {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 80px;
+        h1 {
+          margin-bottom: -15px;
+          font-weight: 500;
+        }
+        h2 {
+          font-weight: 500;
+        }
+      }
+      #title {
+        width: 350px;
+        p {
+          font-size: 12px;
+          font-weight: 400;
+          margin-bottom: -20px;
+        }
+        h1 {
+          font-size: 35px;
+          font-weight: 400;
+        }
+      }
+      #forecast {
+        #wrap-forecast {
+          display: flex;
+          width: 100%;
+          height: 150px;
+          .forecast-item {
+            height: 90%;
+            width: 110px;
+            box-sizing: border-box;
+            border-right: 2px solid black;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            font-weight: 700;
+            &:nth-child(6) {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }
