@@ -27,6 +27,7 @@ $white: rgb(0, 0, 0);
       .item {
         margin-bottom: 50px;
         form {
+          position: relative;
           margin: auto;
           width: fit-content;
           display: flex;
@@ -34,6 +35,7 @@ $white: rgb(0, 0, 0);
           box-sizing: border-box;
           padding: 0 2px;
           border-bottom: 1px solid $white;
+          
           input {
             background-color: rgba(0, 0, 0, 0);
             color: $white;
@@ -50,6 +52,25 @@ $white: rgb(0, 0, 0);
             font-size: 18px;
             color: $white;
           }
+          .filter{
+            position: absolute;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            top: 35px;
+            width: 100%;
+              li{
+                margin: auto;
+                list-style: none;
+                padding: 12px 7px;
+                font-size: 12px;
+                font-weight: 600;
+                &:hover{
+                  cursor: pointer;
+                  background-color: #dddddd;
+                }
+              }
+          }
         }
         &.suhu {
           width: 80%;
@@ -61,14 +82,12 @@ $white: rgb(0, 0, 0);
             font-weight: 500;
           }
           span {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             height: fit-content;
             height: 65px;
 
             p {
-              font-size: 9px;
+              font-size: 15px;
+              font-weight: 500;
             }
             h2 {
               font-size: 30px;
@@ -77,9 +96,9 @@ $white: rgb(0, 0, 0);
           }
         }
         &.icon {
-          background-color: #fff;
+          background-color: rgba(0, 0, 0, 0);
           width: 80%;
-          height: 100px;
+          height: 70px;
           margin: auto;
         }
         &.sun {
@@ -91,6 +110,8 @@ $white: rgb(0, 0, 0);
           height: 130px;
           #sunrise,
           #sunset {
+            display: flex;
+            justify-content: space-between;
             width: 100%;
             height: 45%;
             border-radius: 10px;
@@ -101,6 +122,15 @@ $white: rgb(0, 0, 0);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             div {
+              height: 100%;
+              width: 50%;
+              &:nth-child(2){
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-weight: 500;
+                font-size: 18px;
+              }
               p {
                 margin: 0;
               }
@@ -131,7 +161,8 @@ $white: rgb(0, 0, 0);
         padding-right: 80px;
         h1 {
           margin-bottom: -15px;
-          font-weight: 500;
+          font-weight: 700;
+          font-size: 25px;
         }
         h2 {
           font-weight: 500;
@@ -156,7 +187,7 @@ $white: rgb(0, 0, 0);
           height: 150px;
           .forecast-item {
             height: 90%;
-            width: 110px;
+            width: 130px;
             box-sizing: border-box;
             border-right: 2px solid black;
             display: flex;
@@ -164,7 +195,11 @@ $white: rgb(0, 0, 0);
             flex-direction: column;
             justify-content: space-between;
             font-weight: 700;
-            &:nth-child(6) {
+            align-items: center;
+            p{
+              font-size: 10px;
+            }
+            &:nth-child(5) {
               border: none;
             }
           }
