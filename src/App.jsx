@@ -66,8 +66,6 @@ function App() {
     });
   };
 
-  console.log(forecast);
-
   return (
     <div className="app">
       <div className="wrap-app">
@@ -131,7 +129,12 @@ function App() {
             <div id="sunrise">
               <div>
                 <p>sunrise</p>
-                <img src={"./icons/png/32x32/02d.png"} alt="sunrise" />
+                <img
+                  src={
+                    "https://denipamungkas.github.io/Weather-app-2.0/Icons/png/32x32/02d.png"
+                  }
+                  alt="sunrise"
+                />
               </div>
               <div>
                 {weather
@@ -144,7 +147,10 @@ function App() {
             <div id="sunset">
               <div>
                 <p>sunset</p>
-                <img src="./icons/png/32x32/02n.png" alt="sunset" />
+                <img
+                  src="https://denipamungkas.github.io/Weather-app-2.0/Icons/png/32x32/02n.png"
+                  alt="sunset"
+                />
               </div>
               <div>
                 {weather
@@ -159,14 +165,17 @@ function App() {
           <div id="city">
             <div>
               <h1>
-                {weather
-                  ? placeholder.name + ", " + placeholder.state
-                  : "-"}
+                {weather ? placeholder.name + ", " + placeholder.state : "-"}
               </h1>
               <h2>{new Date().toDateString()}</h2>
             </div>
             <div>
-              <img src={`./Icons/png/128x128/${weather? weather.weather[0].icon : ""}.png`} alt="icon" />
+              <img
+                src={`https://denipamungkas.github.io/Weather-app-2.0/Icons/png/128x128/${
+                  weather ? weather.weather[0].icon : ""
+                }.png`}
+                alt="icon"
+              />
             </div>
           </div>
           <div id="title">
@@ -182,7 +191,10 @@ function App() {
                     {days[new Date(forecast.list[8].dt_txt).getDay()]}
                   </div>
                   <div className="icon">
-                    <img src={`./icons/png/32x32/${forecast.list[8].weather[0].icon}.png`} alt="" />
+                    <img
+                      src={`https://denipamungkas.github.io/Weather-app-2.0/Icons/png/32x32/${forecast.list[8].weather[0].icon}.png`}
+                      alt=""
+                    />
                   </div>
                   <p>{forecast.list[8].weather[0].description}</p>
                   <div className="temp">
@@ -194,7 +206,10 @@ function App() {
                     {days[new Date(forecast.list[16].dt_txt).getDay()]}
                   </div>
                   <div className="icon">
-                    <img src={`./icons/png/32x32/${forecast.list[16].weather[0].icon}.png`} alt="" />
+                    <img
+                      src={`https://denipamungkas.github.io/Weather-app-2.0/Icons/png/32x32/${forecast.list[16].weather[0].icon}.png`}
+                      alt=""
+                    />
                   </div>
                   <p>{forecast.list[16].weather[0].description}</p>
                   <div className="temp">
@@ -206,7 +221,10 @@ function App() {
                     {days[new Date(forecast.list[24].dt_txt).getDay()]}
                   </div>
                   <div className="icon">
-                    <img src={`./icons/png/32x32/${forecast.list[24].weather[0].icon}.png`} alt="" />
+                    <img
+                      src={`https://denipamungkas.github.io/Weather-app-2.0/Icons/png/32x32/${forecast.list[24].weather[0].icon}.png`}
+                      alt=""
+                    />
                   </div>
                   <p>{forecast.list[24].weather[0].description}</p>
                   <div className="temp">
@@ -218,7 +236,10 @@ function App() {
                     {days[new Date(forecast.list[32].dt_txt).getDay()]}
                   </div>
                   <div className="icon">
-                    <img src={`./icons/png/32x32/${forecast.list[32].weather[0].icon}.png`} alt="" />
+                    <img
+                      src={`https://denipamungkas.github.io/Weather-app-2.0/Icons/png/32x32/${forecast.list[32].weather[0].icon}.png`}
+                      alt=""
+                    />
                   </div>
                   <p>{forecast.list[32].weather[0].description}</p>
                   <div className="temp">
@@ -230,7 +251,10 @@ function App() {
                     {days[new Date(forecast.list[39].dt_txt).getDay()]}
                   </div>
                   <div className="icon">
-                    <img src={`./icons/png/32x32/${forecast.list[39].weather[0].icon}.png`} alt="" />
+                    <img
+                      src={`https://denipamungkas.github.io/Weather-app-2.0/Icons/png/32x32/${forecast.list[39].weather[0].icon}.png`}
+                      alt=""
+                    />
                   </div>
                   <p>{forecast.list[39].weather[0].description}</p>
                   <div className="temp">
